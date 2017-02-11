@@ -14,7 +14,7 @@
   
           
     <body>
-   
+ 
        <nav class="light-blue">
     <div class="nav-wrapper">
      <!-- <a href="#!" class="brand-logo">Logo</a> -->
@@ -66,39 +66,9 @@
       <select name="estados" >
       <option value="" disabled selected>Estado</option>
         <option value="0">Todo México</option>
-        <option value="1">Aguascalientes</option>
-        <option value="2">Baja California</option>
-        <option value="3">Baja California Sur</option>
-        <option value="4">Campeche</option>
-        <option value="5">Coahuila de Zaragoza</option>
-        <option value="6">Colima</option>
-        <option value="7">Chiapas</option>
-        <option value="8">Chihuahua</option>
-        <option value="9">Distrito Federal</option>
-        <option value="10">Durango</option>
-        <option value="11">Guanajuato</option>
-        <option value="12">Guerrero</option>
-        <option value="13">Hidalgo</option>
-        <option value="14">Jalisco</option>
-        <option value="15">México</option>
-        <option value="16">Michoacán de Ocampo</option>
-        <option value="17">Morelos</option>
-        <option value="18">Nayarit</option>
-        <option value="19">Nuevo León</option>
-        <option value="20">Oaxaca</option>
-        <option value="21">Puebla</option>
-        <option value="22">Querétaro</option>
-        <option value="23">Quintana Roo</option>
-        <option value="24">San Luis Potosí</option>
-        <option value="25">Sinaloa</option>
-        <option value="26">Sonora</option>
-        <option value="27">Tabasco</option>
-        <option value="28">Tamaulipas</option>
-        <option value="29">Tlaxcala</option>
-        <option value="30">Veracruz de Ignacio de la Llave</option>
-        <option value="31">Yucatán</option>
-        <option value="32">Zacatecas</option>
-
+         @foreach ($estados as $estado)
+      <option value="{{ $estado->id }}">{{ $estado->estado }}</option>
+    @endforeach
       </select>
   </div>
         <div class="input-field col offset-s4 s8 m2 l2">
@@ -115,6 +85,31 @@
     <br />
     <br />
         </div>
+        <footer class="page-footer light-blue">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
      <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
@@ -138,5 +133,12 @@
             color:white;
           }
         </style>
+   {{--      @foreach ($ciudad as $ciu)
+     {{$ciu->ciudad}}
+    @endforeach
+          
+           
+     {{$origen->estado}} --}}
+  
     </body>
 </html>

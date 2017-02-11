@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+use Faker\Factory as Faker;
+
 class EstadosTableSeeder extends Seeder
 {
     /**
@@ -11,6 +13,8 @@ class EstadosTableSeeder extends Seeder
      */
     public function run()
     {
+        
+    $faker = Faker::create();
         //
 DB::table('estados')->insert(['estado' =>'Aguascalientes']);
 DB::table('estados')->insert(['estado' =>'Baja California']);
